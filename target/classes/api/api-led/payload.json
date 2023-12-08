@@ -1,0 +1,23 @@
+[
+  {
+  "UC_APPOINTMENT_PINC": {
+    "UC_APPOINTMENT_PINC_SEG": {
+      "WH_ID": "990",
+      "SYSTEM_DATE": "20200317104837",
+      "IB_FLG": "0",
+      "TURNAROUND_FLG": "0",
+      "MST_SHIP_NUM": "32000511",
+      "SOURCE": "990",
+      "DESTINATION": "0030138251",
+      "VC_RA_NUM": null,
+      "APPT_NUM": "APP0066369",
+      "CAR_ID": "CVYI",
+      "USER_ID": "KAPIL",
+      "APPT_DT": "20200212040000",
+      "DURATION": "023000",
+      "CAR_MOVE_ID": "32000511",
+      "OUTBOUND_SEQ": "197463253"
+    }
+  }
+}
+]
