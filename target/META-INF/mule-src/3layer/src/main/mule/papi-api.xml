@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="papi-apiFlow" doc:id="0e14d6d8-81fe-4658-801a-cdd45c7ebb83" >
+		<http:listener doc:name="Listener" doc:id="73944a8e-2134-4cf3-8b92-2e1a2c131e34" config-ref="3layer_led-httpListenerConfig" path="/order"/>
+		<ee:transform doc:name="Transform Message" doc:id="bb487271-2417-4fb8-aa17-5b341a7f7a0a" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="0d1930d7-5d86-40e5-9ec5-4c61fd39972f" />
+	</flow>
+</mule>
